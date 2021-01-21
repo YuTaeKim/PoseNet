@@ -1,10 +1,9 @@
 import React from 'react';
 
-import MainContainer from 'containers/Main';
 import Layout from 'components/Layout';
 
 const IndexPage = () => {
-  return <MainContainer />;
+  return <Layout title="패밀리 노트 - 로그인"></Layout>;
 };
 
 export default IndexPage;
