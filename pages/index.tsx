@@ -1,9 +1,14 @@
 import React from 'react';
 
 import Layout from 'components/Layout';
+import ManualContainer from 'containers/Manual';
 
 const IndexPage = () => {
-  return <Layout title="패밀리 노트 - 로그인"></Layout>;
+  return (
+    <Layout title="Manual | YuTae">
+      <ManualContainer />
+    </Layout>
+  );
 };
 
 export default IndexPage;

@@ -30,7 +30,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
     <ScrollToTop>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <title>로켓메이커스</title>
+        <title>Blog | YuTae</title>
         <Component {...pageProps} />
       </ThemeProvider>
     </ScrollToTop>

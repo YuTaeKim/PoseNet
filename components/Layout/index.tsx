@@ -21,7 +21,7 @@ const Layout = ({
   // noHeader,
   // centered,
   // transparent,
-  title = '패밀리노트',
+  title = 'Blog | YuTae',
 }: Props) => {
   const [height, setHeight] = useState(0);
   useEffect(() => {
@@ -52,8 +52,5 @@ interface styleProps {
 }
 
 const Body = styled.div<styleProps>`
-  display: flex;
-  max-width: 600px;
-  margin: auto;
   height: ${(props) => `${props.height}px`};
 `;
