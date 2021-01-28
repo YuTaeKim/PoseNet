@@ -15,8 +15,8 @@ const Push = () => {
       appId: '1:1095494284612:web:cb4a71a79bbbdcad1c5311',
     };
     console.log('check');
-    // firebase.initializeApp(config);
-    // console.log('check2');
+    firebase.initializeApp(config);
+    console.log('check2');
 
     // const messaging = firebase.messaging();
 
