@@ -72,7 +72,7 @@ export default class MyDocument extends Document<Props> {
             name="format-detection"
             content="telephone=no, address=no, email=no"
           />
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="shortcut icon" href="/Profile.jpeg" />
           <link rel="manifest" href="/manifest.json" />
           {/* Google Analytics */}
           <script
