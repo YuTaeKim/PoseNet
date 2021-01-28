@@ -15,36 +15,36 @@ const Push = () => {
       appId: '1:1095494284612:web:cb4a71a79bbbdcad1c5311',
     };
     console.log('check');
-    firebase.initializeApp(config);
-    console.log('check2');
+    // firebase.initializeApp(config);
+    // console.log('check2');
 
-    const messaging = firebase.messaging();
+    // const messaging = firebase.messaging();
 
-    Notification.requestPermission().then((flag) => {
-      if (flag === 'granted') {
-        messaging
-          .getToken()
-          .then((token) => {
-            if (token) {
-              console.log(token);
-              setToken(token);
-              localStorage.setItem('token', token);
-            }
-          })
-          .catch((err) => {
-            console.log('fcm에러 : ', err);
-          });
-      }
-    });
+    // Notification.requestPermission().then((flag) => {
+    //   if (flag === 'granted') {
+    //     messaging
+    //       .getToken()
+    //       .then((token) => {
+    //         if (token) {
+    //           console.log(token);
+    //           setToken(token);
+    //           localStorage.setItem('token', token);
+    //         }
+    //       })
+    //       .catch((err) => {
+    //         console.log('fcm에러 : ', err);
+    //       });
+    //   }
+    // });
 
-    messaging.onMessage((payload) => {
-      console.log('Message received. ', payload);
-      // ...
+    // messaging.onMessage((payload) => {
+    //   console.log('Message received. ', payload);
+    //   // ...
 
-      var notify = new Notification(payload.notification.title, {
-        body: payload.notification.body,
-      });
-    });
+    //   var notify = new Notification(payload.notification.title, {
+    //     body: payload.notification.body,
+    //   });
+    // });
   }, []);
 
   return <div>{token ? token : null}</div>;
