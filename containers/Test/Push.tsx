@@ -18,7 +18,7 @@ const Push = () => {
     firebase.initializeApp(config);
     console.log('check2');
 
-    // const messaging = firebase.messaging();
+    const messaging = firebase.messaging();
 
     // Notification.requestPermission().then((flag) => {
     //   if (flag === 'granted') {
