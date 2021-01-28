@@ -20,31 +20,31 @@ const Push = () => {
 
     const messaging = firebase.messaging();
 
-    // Notification.requestPermission().then((flag) => {
-    //   if (flag === 'granted') {
-    //     messaging
-    //       .getToken()
-    //       .then((token) => {
-    //         if (token) {
-    //           console.log(token);
-    //           setToken(token);
-    //           localStorage.setItem('token', token);
-    //         }
-    //       })
-    //       .catch((err) => {
-    //         console.log('fcm에러 : ', err);
-    //       });
-    //   }
-    // });
+    Notification.requestPermission().then((flag) => {
+      if (flag === 'granted') {
+        messaging
+          .getToken()
+          .then((token) => {
+            if (token) {
+              console.log(token);
+              setToken(token);
+              localStorage.setItem('token', token);
+            }
+          })
+          .catch((err) => {
+            console.log('fcm에러 : ', err);
+          });
+      }
+    });
 
-    // messaging.onMessage((payload) => {
-    //   console.log('Message received. ', payload);
-    //   // ...
+    messaging.onMessage((payload) => {
+      console.log('Message received. ', payload);
+      // ...
 
-    //   var notify = new Notification(payload.notification.title, {
-    //     body: payload.notification.body,
-    //   });
-    // });
+      var notify = new Notification(payload.notification.title, {
+        body: payload.notification.body,
+      });
+    });
   }, []);
 
   return <div>{token ? token : null}</div>;
