@@ -8,6 +8,7 @@ import React, {
 import styled from 'styled-components';
 import LifeCycle from './_fragments/LifeCycle';
 import MobxRender from './_fragments/MobxRender';
+import Push from './_fragments/Push';
 
 console.log('ManualContainer download');
 
@@ -20,12 +21,13 @@ const ManualContainer = () => {
 
   const scrollToRef = (value: string) => {
     const obj: any = {
-      LifeCycle: 0,
+      Push: 0,
+      LifeCycle: 1,
       MobxRender: 2,
     };
     focusTarget.current[obj[value]].scrollIntoView({
       block: 'center',
-      behavior: 'auto',
+      behavior: 'smooth',
     });
   };
 
@@ -87,6 +89,7 @@ const ManualContainer = () => {
             Contents
           </ContentIndex>
           <Contents className={fold ? 'fold' : 'unfold'}>
+            <ContentItem onClick={() => scrollToRef('Push')}>Push</ContentItem>
             <ContentItem onClick={() => scrollToRef('LifeCycle')}>
               Life Cycle
             </ContentItem>
@@ -98,34 +101,18 @@ const ManualContainer = () => {
       </Header>
       <ManualBox>
         <ManualItem>
-          <LifeCycle
+          <Push
             handleRef={(element: any) => (focusTarget.current[0] = element)}
           />
         </ManualItem>
         <ManualItem>
-          <MobxRender
+          <LifeCycle
             handleRef={(element: any) => (focusTarget.current[1] = element)}
           />
         </ManualItem>
         <ManualItem>
-          here
           <MobxRender
             handleRef={(element: any) => (focusTarget.current[2] = element)}
-          />
-        </ManualItem>
-        <ManualItem>
-          <MobxRender
-            handleRef={(element: any) => (focusTarget.current[3] = element)}
-          />
-        </ManualItem>
-        <ManualItem>
-          <MobxRender
-            handleRef={(element: any) => (focusTarget.current[3] = element)}
-          />
-        </ManualItem>
-        <ManualItem>
-          <MobxRender
-            handleRef={(element: any) => (focusTarget.current[3] = element)}
           />
         </ManualItem>
       </ManualBox>
@@ -138,6 +125,16 @@ export default ManualContainer;
 const Container = styled.div<any>`
   height: 100vh;
   overflow-y: scroll;
+  animation-name: start;
+  animation-duration: 1s;
+  @keyframes start {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 const Header = styled.div<any>`

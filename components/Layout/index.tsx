@@ -3,9 +3,6 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import theme from 'layout/theme';
 
-// import Nav from 'components/Nav';
-// import Footer from "./Footer";
-
 console.log('Layout download');
 
 interface Props {
