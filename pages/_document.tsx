@@ -3,6 +3,8 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import { ServerStyleSheets } from '@material-ui/styles';
 
+console.log('_document download');
+
 const SITE_NAME = 'SITE_NAME';
 const SITE_TITLE = 'SITE_TITLE';
 const SITE_DESCRIPTION = 'SITE_DESCRIPTION';
@@ -37,6 +39,7 @@ export default class MyDocument extends Document<Props> {
   render() {
     return (
       <Html>
+        {console.log('_document render')}
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link

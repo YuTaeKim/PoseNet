@@ -6,6 +6,8 @@ import theme from 'layout/theme';
 // import Nav from 'components/Nav';
 // import Footer from "./Footer";
 
+console.log('Layout download');
+
 interface Props {
   pageName?: string;
   noHeader?: boolean;
@@ -25,6 +27,7 @@ const Layout = ({
 }: Props) => {
   const [height, setHeight] = useState(0);
   useEffect(() => {
+    console.log('Layout effect');
     const updateSize = () => {
       setHeight(window.innerHeight);
     };
@@ -33,7 +36,8 @@ const Layout = ({
     return () => window.removeEventListener('resize', updateSize);
   }, []);
   return (
-    <div style={{ background: theme.color.GRAY4 }}>
+    <div>
+      {console.log('Layout render')}
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />

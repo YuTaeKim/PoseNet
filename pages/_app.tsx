@@ -11,6 +11,8 @@ import GlobalStyle from 'layout/reset';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+console.log('_app download');
+
 React.useLayoutEffect = React.useEffect;
 
 declare global {
@@ -21,6 +23,7 @@ declare global {
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
+    {console.log('_app render')}
     <Head>
       <meta
         name="viewport"
