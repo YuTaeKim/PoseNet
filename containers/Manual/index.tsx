@@ -21,9 +21,12 @@ const ManualContainer = () => {
   const scrollToRef = (value: string) => {
     const obj: any = {
       LifeCycle: 0,
-      MobxRender: 1,
+      MobxRender: 2,
     };
-    focusTarget.current[obj[value]].scrollIntoView({ behavior: 'smooth' });
+    focusTarget.current[obj[value]].scrollIntoView({
+      block: 'center',
+      behavior: 'auto',
+    });
   };
 
   useEffect(() => {
@@ -40,6 +43,9 @@ const ManualContainer = () => {
       setScrollY(scrollNow);
     };
     const handleClick = (e: any) => {
+      if (scrollRef.current.scrollTop >= 80) {
+        setTop(-80);
+      }
       if (e.target.nodeName !== 'LI') {
         if (!fold) {
           setFold(true);
@@ -99,6 +105,27 @@ const ManualContainer = () => {
         <ManualItem>
           <MobxRender
             handleRef={(element: any) => (focusTarget.current[1] = element)}
+          />
+        </ManualItem>
+        <ManualItem>
+          here
+          <MobxRender
+            handleRef={(element: any) => (focusTarget.current[2] = element)}
+          />
+        </ManualItem>
+        <ManualItem>
+          <MobxRender
+            handleRef={(element: any) => (focusTarget.current[3] = element)}
+          />
+        </ManualItem>
+        <ManualItem>
+          <MobxRender
+            handleRef={(element: any) => (focusTarget.current[3] = element)}
+          />
+        </ManualItem>
+        <ManualItem>
+          <MobxRender
+            handleRef={(element: any) => (focusTarget.current[3] = element)}
           />
         </ManualItem>
       </ManualBox>
