@@ -86,19 +86,15 @@ const ManualContainer = () => {
             className={`header ${fold ? 'fold' : 'unfold'}`}
             onClick={() => setFold(!fold)}
           >
-            {' '}
             Contents
           </ContentIndex>
-
           <Contents className={fold ? 'fold' : 'unfold'}>
             <ContentItem onClick={() => scrollToRef('Push')}>Push</ContentItem>
             <ContentItem onClick={() => scrollToRef('LifeCycle')}>
-              {' '}
-              Life Cycle{' '}
+              Life Cycle
             </ContentItem>
             <ContentItem onClick={() => scrollToRef('MobxRender')}>
-              {' '}
-              Mobx Render{' '}
+              Mobx Render
             </ContentItem>
           </Contents>
         </ContentBox>
@@ -255,8 +251,4 @@ const ManualItem = styled.div`
   background-color: #f7f7e8;
   padding: 20px;
   margin-bottom: 20px;
-`;
-
-const Conts = styled.div`
-  background: red;
 `;
