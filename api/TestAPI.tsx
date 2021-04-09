@@ -9,5 +9,3 @@ export const getProtectorList = async (
     `/api/v1/protector/?status=${status}&centers=${centerId}&page=${page}`,
   );
 };
-
-// fasdfa
