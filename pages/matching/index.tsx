@@ -1,15 +1,18 @@
 import React from 'react';
-
 import Layout from 'components/Layout';
-import TestContainer from 'containers/Test';
+import dynamic from 'next/dynamic';
 
 console.log('page download');
+
+const DynamicComponent = dynamic(() => import('containers/Test/Push'), {
+  ssr: false,
+});
 
 const IndexPage = () => {
   return (
     <Layout title="Manual | YuTae">
       {console.log('page render')}
-      <TestContainer />
+      <div>Matching Page</div>
     </Layout>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
+
 import Layout from 'components/Layout';
-import HomeContainer from 'containers/Home';
+import ManualContainer from 'containers/Manual';
 import dynamic from 'next/dynamic';
 
 console.log('page download');
@@ -11,9 +12,10 @@ const DynamicComponent = dynamic(() => import('containers/Test/Push'), {
 
 const IndexPage = () => {
   return (
-    <Layout title="KICKIT | WIP">
+    <Layout title="Manual | YuTae">
       {console.log('page render')}
-      <HomeContainer />
+      <ManualContainer />
+      {/* <DynamicComponent /> */}
     </Layout>
   );
 };
