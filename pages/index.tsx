@@ -14,8 +14,8 @@ const IndexPage = () => {
   return (
     <Layout title="Manual | YuTae">
       {console.log('page render')}
-      <ManualContainer />
-      {/* <DynamicComponent /> */}
+      {/* <ManualContainer /> */}
+      <DynamicComponent />
     </Layout>
   );
 };

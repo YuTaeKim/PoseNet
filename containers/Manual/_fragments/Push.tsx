@@ -1,4 +1,3 @@
-import Router from 'next/router';
 import React, { useEffect, useContext, useState } from 'react';
 import styled, { css } from 'styled-components';
 
@@ -20,7 +19,7 @@ const Push = ({ handleRef }: Props) => {
         <Title>Push</Title>
       </div>
       <ContentBox>
-        <Button onClick={() => Router.push('/test')}>Push Button</Button>
+        <Button>Push Button</Button>
       </ContentBox>
     </Container>
   );

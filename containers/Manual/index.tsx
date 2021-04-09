@@ -124,18 +124,15 @@ export default ManualContainer;
 
 const Container = styled.div<any>`
   height: 100vh;
-  position: relative;
   overflow-y: scroll;
   animation-name: start;
-  animation-duration: 0.2s;
+  animation-duration: 1s;
   @keyframes start {
     0% {
-      opacity: 1;
-      left: 1000px;
+      opacity: 0;
     }
     100% {
       opacity: 1;
-      left: 0px;
     }
   }
 `;
