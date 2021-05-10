@@ -70,11 +70,18 @@ const TasteContainer = () => {
           left: 20,
           width: 50,
           height: 50,
+          zIndex: 1,
         }}
         onClick={() => Router.back()}
       />
-      <Webcam ref={webcamRef}></Webcam>
-      <canvas ref={canvasRef} style={{ position: 'absolute' }}></canvas>
+      <Webcam
+        ref={webcamRef}
+        style={{ position: 'relative', zIndex: 0 }}
+      ></Webcam>
+      <canvas
+        ref={canvasRef}
+        style={{ position: 'absolute', zIndex: 0 }}
+      ></canvas>
     </Container>
   );
 };
