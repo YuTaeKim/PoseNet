@@ -12,6 +12,9 @@ const OrientaionContainer = () => {
   return (
     <Container>
       <Title onClick={() => Router.push('/taste')}>PoseNet 맛보기</Title>
+      <Title onClick={() => Router.push('/reference')}>
+        Pro Pose Reference
+      </Title>
       <Title onClick={() => Router.push('/')}>Pro Pose 맛보기</Title>
     </Container>
   );

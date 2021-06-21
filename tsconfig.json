@@ -7,30 +7,59 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["dom", "es2017"],
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
+    // "noImplicitAny": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true,
+    // "strict": true,
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
-      "api/*": ["api/*"],
-      "public/*": ["public/*"],
-      "components/*": ["components/*"],
-      "containers/*": ["containers/*"],
-      "utils/*": ["utils/*"],
-      "static/*": ["static/*"],
-      "layout/*": ["layout/*"],
-      "interfaces/*": ["interfaces/*"],
-      "stores/*": ["stores/*"]
-    }
+      "api/*": [
+        "api/*"
+      ],
+      "public/*": [
+        "public/*"
+      ],
+      "components/*": [
+        "components/*"
+      ],
+      "containers/*": [
+        "containers/*"
+      ],
+      "utils/*": [
+        "utils/*"
+      ],
+      "static/*": [
+        "static/*"
+      ],
+      "layout/*": [
+        "layout/*"
+      ],
+      "interfaces/*": [
+        "interfaces/*"
+      ],
+      "stores/*": [
+        "stores/*"
+      ]
+    },
+    "strict": false
   },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "**/*.svg"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.svg"
+  ]
 }

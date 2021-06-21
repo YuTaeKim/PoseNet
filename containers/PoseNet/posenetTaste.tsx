@@ -16,6 +16,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 const TasteContainer = () => {
   const webcamRef = useRef<any>();
   const canvasRef = useRef<any>();
+  const videoRef = useRef<any>();
 
   const runPosenet = async () => {
     const net = await posenet.load();
@@ -39,10 +40,6 @@ const TasteContainer = () => {
       webcamRef.current.video.height = videoHeight;
 
       const pose = await net.estimateSinglePose(video);
-      console.log(pose);
-
-      console.log(canvasRef.current);
-
       drawCanvas(pose, video, canvasRef);
     }
   };
